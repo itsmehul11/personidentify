@@ -1,0 +1,4 @@
+flows:
+  - 'get-personidentify.yaml'
+
+location: 'classpath:/flows/'

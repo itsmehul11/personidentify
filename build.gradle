@@ -1,0 +1,31 @@
+plugins {
+	id 'java'
+	id("org.springframework.boot") version "3.4.0"
+	id("io.spring.dependency-management") version "1.1.6"
+}
+group = 'com.accenture.mercury'
+version = '4.1.0'
+
+description = 'Parent Mercury'
+
+
+repositories {
+	mavenCentral()
+	mavenLocal()
+}
+
+dependencies {
+	configurations.configureEach {
+		exclude module: 'log4j-to-slf4j'
+		exclude module: 'logback-classic'
+	}
+	implementation("org.platformlambda:kafka-connector:4.1.2")
+	implementation("org.platformlambda:event-script-engine:4.1.2")
+	testImplementation platform('org.junit:junit-bom:5.10.0')
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
