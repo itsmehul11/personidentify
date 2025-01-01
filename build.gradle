@@ -22,10 +22,10 @@ dependencies {
 	implementation("org.platformlambda:kafka-connector:4.1.2")
 	implementation("org.platformlambda:event-script-engine:4.1.2")
 	testImplementation platform('org.junit:junit-bom:5.10.0')
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+//	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
 }
 
 tasks.named('test') {
-	useJUnitPlatform()
+//	useJUnitPlatform()
 }

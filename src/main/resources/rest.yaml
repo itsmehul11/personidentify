@@ -23,6 +23,15 @@ rest:
     headers: header_1
     tracing: true
 
+  - service: "http.flow.adapter"
+    methods: ['GET']
+    url: "/api/get-plan"
+    flow: 'get-plan'
+    timeout: 10s
+    cors: cors_1
+    headers: header_1
+    tracing: true
+
 
 
 
