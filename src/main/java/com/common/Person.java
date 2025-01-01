@@ -1,4 +1,4 @@
-package com.example.person_identification.models;
+package com.common;
 
 public class Person {
 

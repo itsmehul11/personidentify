@@ -1,11 +1,11 @@
 package com.example.person_identification.task;
 
-import com.example.person_identification.models.Person;
+import com.common.Person;
 import org.platformlambda.core.annotations.PreLoad;
 import org.platformlambda.core.models.TypedLambdaFunction;
 
 import java.util.Map;
-import java.util.Objects;
+
 @PreLoad( route = "person.identify", instances = 100,isPrivate = false)
 public class Personidentify implements TypedLambdaFunction<Person,Person> {
     @Override

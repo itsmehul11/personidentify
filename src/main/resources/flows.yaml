@@ -1,5 +1,6 @@
 flows:
   - 'get-personidentify.yaml'
   - 'get-plan.yaml'
+  - 'get-person.yaml'
 
 location: 'classpath:/flows/'
